@@ -1,4 +1,4 @@
-# react-native-settings-list
+# react-native-setting-list
 ---
 A clean and highly customizable React Native implementation of a list of settings for a settings page.<a name='top'/>
 
@@ -24,7 +24,7 @@ Install the module with:
 
 
 ```
-npm install react-native-settings-list --save
+npm install react-native-setting-list --save
 ```
 ## <a name='usage'>Usage</a>
 ---
@@ -32,7 +32,7 @@ In your code, simply require/import the module:
 
 
 ```
-import SettingsList from 'react-native-settings-list';
+import SettingsList from 'react-native-setting-list';
 ```
 
 ###### <a href='#top'>Top</a>
