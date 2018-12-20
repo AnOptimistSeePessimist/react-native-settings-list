@@ -1,6 +1,6 @@
 {
   "name": "react-native-settings-list",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "A clean and highly customizable React Native implementation of a list of settings for a settings page.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "settings-list",
     "settings"
   ],
-  "author": "Steve Singrattana <steve@projectinf.com>",
+  "author": "Steve Singrattana <steve@projectinf.com>, Josh Conlin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/evetstech/react-native-settings-list/issues"
@@ -29,7 +29,6 @@
     "react": ">=0.14.0"
   },
   "dependencies": {
-    "create-react-class": "^15.6.2",
     "prop-types": "^15.5.10"
   }
 }
