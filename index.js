@@ -162,7 +162,7 @@ class SettingsList extends React.Component {
   _itemView(item, index, max) {
     let border;
 
-    if (item.type && item.type.displayName) {
+    if (item.type) {
       return item;
     }
 
