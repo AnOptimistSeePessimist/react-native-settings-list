@@ -345,7 +345,8 @@ class SettingsList extends React.Component {
     return null;
   }
 }
-module.exports = SettingsList;
+
+export default SettingsList;
 
 const styles = StyleSheet.create({
   itemBox: {
