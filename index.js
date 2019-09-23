@@ -1,9 +1,6 @@
-"use strict";
-
 import React from "react";
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
-
 import {
   View,
   TouchableHighlight,
@@ -38,7 +35,7 @@ class SettingsList extends React.Component {
   };
 
   _getGroups() {
-    var groupNumber = -1;
+    let groupNumber = -1;
     let headers = [];
     let itemGroup = [];
     let result = [];
@@ -46,8 +43,10 @@ class SettingsList extends React.Component {
       // Allow for null, optional fields
       if (!child) return;
 
-      if (child.type.displayName === "Header") {
-        if (groupNumber != -1) {
+      const {type: {displayName}, props} = child;
+
+      if (displayName === "Header") {
+        if (groupNumber !== -1) {
           result[groupNumber] = {
             items: itemGroup,
             header: headers[groupNumber]
@@ -55,14 +54,14 @@ class SettingsList extends React.Component {
           itemGroup = [];
         }
         groupNumber++;
-        headers[groupNumber] = child.props;
-      } else if (child.type.displayName === "Item") {
-        if (groupNumber == -1) {
+        headers[groupNumber] = props;
+      } else if (displayName === "Item") {
+        if (groupNumber === -1) {
           groupNumber++;
         }
-        itemGroup.push(child.props);
+        itemGroup.push(props);
       } else {
-        if (groupNumber == -1) {
+        if (groupNumber === -1) {
           groupNumber++;
         }
         itemGroup.push(child);
@@ -185,7 +184,7 @@ class SettingsList extends React.Component {
   }
 
   _itemView(item, index, max) {
-    var border;
+    let border;
 
     if (item.type) {
       return item;
@@ -303,7 +302,7 @@ class SettingsList extends React.Component {
                   }}
                 >
                   {item.isEditable
-                    ? this._itemEditableBlock(item, inde, "Bottom")
+                    ? this._itemEditableBlock(item, index, "Bottom")
                     : this._itemTitleBlock(item, index, "Bottom")}
                 </View>
               ) : item.isEditable ? (
