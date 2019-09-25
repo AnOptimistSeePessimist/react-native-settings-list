@@ -95,8 +95,8 @@ class SettingsList extends React.Component {
           </Text>
           <View
             style={{
-              borderTopWidth: 1,
-              borderBottomWidth: 1,
+              borderTopWidth: StyleSheet.hairlineWidth,
+              borderBottomWidth: StyleSheet.hairlineWidth,
               borderColor: this.props.borderColor
             }}
           >
@@ -112,8 +112,8 @@ class SettingsList extends React.Component {
         items = (
           <View
             style={{
-              borderTopWidth: 1,
-              borderBottomWidth: 1,
+              borderTopWidth: StyleSheet.hairlineWidth,
+              borderBottomWidth: StyleSheet.hairlineWidth,
               borderColor: this.props.borderColor
             }}
           >
@@ -194,19 +194,19 @@ class SettingsList extends React.Component {
       switch (item.borderHide) {
         case "Top":
           border = {
-            borderBottomWidth: 1,
+            borderBottomWidth: StyleSheet.hairlineWidth,
             borderColor: this.props.borderColor
           };
           break;
         case "Bottom":
-          border = { borderTopWidth: 1, borderColor: this.props.borderColor };
+          border = { borderTopWidth: StyleSheet.hairlineWidth, borderColor: this.props.borderColor };
           break;
       }
     } else {
       border =
         index === max - 1
           ? { borderWidth: 0 }
-          : { borderBottomWidth: 1, borderColor: this.props.borderColor };
+          : { borderBottomWidth: StyleSheet.hairlineWidth, borderColor: this.props.borderColor };
     }
 
     let titleInfoPosition = item.titleInfoPosition
@@ -252,14 +252,14 @@ class SettingsList extends React.Component {
               >
                 <View
                   style={{
-                    borderBottomWidth: 1,
+                    borderBottomWidth: StyleSheet.hairlineWidth,
                     borderColor: this.props.borderColor
                   }}
                 >
                   <TextInput
                     ref="UserNameInputBlock"
                     onSubmitEditing={() => this.refs.PasswordInputBlock.focus()}
-                    style={{ flex: 1, height: 30, borderBottomWidth: 1 }}
+                    style={{ flex: 1, height: 30, borderBottomWidth: StyleSheet.hairlineWidth }}
                     placeholder="username"
                     {...item.authPropsUser}
                   />
